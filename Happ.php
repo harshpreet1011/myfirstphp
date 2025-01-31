@@ -4,7 +4,8 @@
 $conn = new mysqli("localhost","root","","harsh");
 
 
-$new_query="select * from login where email=$Name &&  password=$Password";
+$new_query="select * from login where email = $Email &&  password=$Password";
+
 $mydata =  $conn->query($new_query);
 
 

@@ -36,7 +36,20 @@
               <li class="nav-item">
                 <a class="nav-link" href="Contact.php">Contact</a>
               </li> <li class="nav-item">
-                <a class="nav-link" href="Login.php">login</a>
+
+              <?php
+
+              session_start();
+
+              if (isset($_SESSION["email"]) && $_SESSION["password"]){
+                echo '<a class="nav-link" href="logout.php">Logout</a>';
+                echo $_SESSION["email"];
+              }
+              else {
+              echo '<a class="nav-link" href="Login.php">login</a>';
+              }
+                ?>
+
               </li>
             </ul>
             <form class="d-flex" role="search" style="margin-right: 1%;">

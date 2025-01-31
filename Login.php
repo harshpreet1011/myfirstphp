@@ -189,7 +189,7 @@
             <h1>Login</h1>
         </div>
         <div class="form-body">
-        <form action="Happ.php" method="POST">
+        <form  action="authentication.php" method="post">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="emaili" placeholder="Enter your email" required>
