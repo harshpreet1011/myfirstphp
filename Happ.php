@@ -4,9 +4,9 @@
 $conn = new mysqli("localhost","root","","harsh");
 
 
-$new_query="select * from login where email = $Email &&  password=$Password";
+// $new_query="select * from login where email = $Email &&  password=$Password";
 
-$mydata =  $conn->query($new_query);
+// $mydata =  $conn->query($new_query);
 
 
 
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
     $Password=$_POST['pass'];
     
 
-    $sql_query="insert into login ( name, email,password) values ('$Name','$Email','$Password')";
+    $sql_query="insert into login ( Name, Email,Password) values ('$Name','$Email','$Password')";
 
     $conn->query($sql_query);
 

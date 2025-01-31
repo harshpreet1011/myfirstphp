@@ -9,45 +9,11 @@
   <body   style="  background-image: url(https://picsum.photos/1500/3000?vegetabl);!important; */
     background-color:rgba(243, 235, 235, 0); ">
    
-   <nav class="navbar navbar-expand-lg bg-body-tertiary" >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Index.php">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="formdata.php">form</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Product
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="Addppduct.php">Add Product</a></li>
-                  <li><a class="dropdown-item" href="Adetail.php">Product details</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Contact.php">Contact</a>
-              </li> <li class="nav-item">
-                <a class="nav-link" href="Login.php">login</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search" style="margin-right: 1%;">
-              <input class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-           
-          </div>
-        </div>
-    </nav>
+
+   <?php include("Navbar.php");
+echo "<br />";
+?>
+
 
 
   <div style="display: flex;
@@ -65,7 +31,7 @@
       <img src='".$data['image_pathh']."' class='card-img-top' alt='...' style='height: 200px;'>
       <div class='card-body'>
         <h5 class='card-title'> Title = ".$data['Title']."</h5>
-    <p class='card-text'>Discription = ".$data['image_pathh']."</p>
+    
     <p class='card-text'>Discription = ".$data['Discription']."</p>
     <p class='card-text' style=' color: red;text-decoration: line-through;'>Old Price = ".$data['Old']."</p>
     <p class='card-text'style=' color: green;'>New Price = ".$data['New']."</p>
@@ -156,6 +122,8 @@
     </div> -->
   </footer>
 </div>
+
+<!-- <p class='card-text'>Discription = ".$data['image_pathh']."</p> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
