@@ -8,19 +8,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $x = "select * from login where Email = '$Email' &&  Password='$Password'";
 
-  
-if($conn->query($x)){
-        session_start();
-        $_SESSION["Email"] = $Email;
-        $_SESSION["Password"] = $Password;
+    // echo "heyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy";
+    // print_r($conn->query($x));
+    if($conn->query($x)){
+            session_start();
+            $_SESSION["Email"] = $Email;
+            $_SESSION["Password"] = $Password;
 
-        header("Location: index.php");
+            header("Location: index.php");
+        }else{
+            echo "sigup";
+        }
+    
     }
-}
-else{
-    echo "sigup";
-}
-
+    
 
 
 
