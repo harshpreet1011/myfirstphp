@@ -33,11 +33,33 @@
                     <?php
               session_start();
               if (isset($_SESSION["Email"]) && $_SESSION["Password"]){
-                echo '<a class="nav-link" href="logout.php">Logout</a>';
-                echo $_SESSION["Email"];
+                      echo '<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Logout 
+                    </a>
+                    <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="">'.$_SESSION['Email'].'</a></li>
+                      <li><a class="dropdown-item" href="Logout.php">Logout</a></li>
+                       
+                       
+                    </ul>
+                </li>';
+                // echo '<a class="nav-link" href="logout.php">Logout</a>'
+                // ;
+                // echo $_SESSION["Email"];
               }
               else {
-              echo '<a class="nav-link" href="Login.php">login</a>';
+                      echo ' <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Login
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Login.php">Login/Signup</a></li>
+                        <li><a class="dropdown-item" href="Logout.php">Logout</a></li>
+                    </ul>
+                </li>';
               }
                 ?>
 
